@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 7</title>
+   
+   
+   <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #121212;
+          color: #f0f0f0;
+          position: relative;
+      }
+  
+      .page {
+          display: none;
+          padding: 2rem;
+          max-width: 800px;
+          margin: auto;
+          background-color: #1e1e1e;
+          border-radius: 10px;
+          min-height: 100vh;
+          position: relative;
+          z-index: 1; /* Garante que o conteúdo principal fique acima das colunas laterais */
+      }
+  
+      .page.active {
+          display: block;
+      }
+  
+      .pagination {
+          text-align: center;
+          margin-top: 1rem;
+      }
+  
+      .btn {
+          display: inline-block;
+          padding: 1rem 2rem;
+          background-color: #6200ea;
+          color: #ffffff;
+          text-decoration: none;
+          border-radius: 5px;
+          transition: background-color 0.3s;
+      }
+  
+      .btn:hover {
+          background-color: #3700b3;
+      }
+  
+      .btn.disabled {
+          background-color: #cccccc;
+          cursor: not-allowed;
+      }
+  
+      footer {
+          text-align: center;
+          padding: 1rem;
+          background-color: #1e1e1e;
+          color: #ffffff;
+      }
+  
+      .chapter-title {
+          font-size: 2rem;
+          font-weight: bold;
+          color: #ff5722; /* Cor laranja para destaque */
+          text-align: center;
+          margin-bottom: 1rem;
+      }
+  
+      .illustration-container {
+          display: flex;
+          align-items: center; /* Alinha verticalmente o texto e a imagem */
+          margin: 1rem 0;
+      }
+  
+      .illustration-container .text {
+          flex: 1; /* Faz o texto ocupar o espaço restante */
+          margin-right: 1rem; /* Espaço entre o texto e a imagem */
+      }
+  
+      .illustration-container .illustration {
+          max-width: 200px; /* Ajuste conforme necessário */
+          height: auto;
+      }
+  
+      .side {
+          position: fixed; /* Use fixed para as colunas laterais ficarem fixas */
+          top: 0;
+          bottom: 0;
+          width: 15%; /* Ajuste a largura conforme necessário */
+          background: no-repeat center center;
+          background-size: cover;
+          z-index: 0; /* Colunas laterais ficam atrás do conteúdo principal */
+      }
+  
+      .side.left {
+          left: 0;
+          background-image: url('capa.jpg'); /* Imagem da coluna esquerda */
+      }
+  
+      .side.right {
+          right: 0;
+          background-image: url('capa.jpg'); /* Imagem da coluna direita */
+      }
+      </style>
+<body>
+    <div class="page active" id="page1">
+        <article>
+            <p class="chapter-title">Capítulo 7: Rumo ao Desconhecido</p>
+            <p>Depois dos acontecimentos com Klaus, toda a estrutura dos ceifeiros ficou abalada. O escândalo de que alguns de seus próprios companheiros se submeteram às trevas e se aliaram aos demônios era algo difícil de processar. Todos na base dos ceifeiros estavam desconfiando uns dos outros. Então, Fell chamou Shiro e Ive para conversar sobre as informações adquiridas sobre o Norte, que indicavam que cada vez mais almas estavam indo antes de seu momento, e talvez a resposta para essas perguntas estivesse no Norte.</p>
+
+<p>Shiro, ouvindo isso, imediatamente disse para Ive que eles precisavam investigar. Ive acenou com a cabeça, confirmando.</p>
+
+<p>O sol estava se pondo no horizonte, pintando o céu com tons de laranja e rosa enquanto Shiro e Ive começavam sua jornada rumo ao desconhecido. O vento soprava suavemente, carregando consigo um leve aroma de flores silvestres, enquanto eles caminhavam por uma estrada sinuosa que se estendia diante deles.</p>
+
+<p>Shiro ajustou o manto negro que envolvia seus ombros, sentindo uma mistura de emoções enquanto pensava no que os aguardava adiante. Ele sabia que havia muito a descobrir sobre os reinos espirituais e os desafios que enfrentariam em seu caminho.</p>
+
+<p>Ive caminhava ao lado de Shiro, seus olhos brilhando com empolgação e curiosidade. Ela estava ansiosa para explorar novos territórios e descobrir os segredos que aguardavam além do horizonte.</p>
+
+<p>Enquanto avançavam, Shiro e Ive encontraram uma encruzilhada na estrada, onde se depararam com uma placa antiga e desgastada. A placa estava coberta de musgo e quase ilegível, mas ainda assim indicava duas direções: uma levava a uma floresta densa e sombria ao norte de Rafingart, enquanto a outra seguia em direção a uma montanha imponente e coberta de neve para o leste, em Krasnhim.</p>
+
+<p>Shiro e Ive trocaram olhares, ponderando sobre qual caminho deveriam seguir. Eles sabiam que cada escolha os levaria a novas aventuras e desafios. Então, Ive propôs uma ideia um tanto inusitada: “Vamos decidir com pedra, papel e tesoura,” disse Ive.</p>
+
+<p>“Sério isso? A gente tem uma decisão importante aqui e você quer resolver o nosso caminho com um jogo?” disse Shiro.</p>
+
+<p>“Mas é claro que sim! Eu sou a montanha e você aquela floresta bizarra. Vou logo avisando que sou muito boa nesse jogo, é muito raro eu perder para alguém,” disse Ive.</p>
+
+<p>“Aahhh! Tá bom, vamos terminar logo com isso,” disse Shiro.</p>
+
+<p>Resumindo, Ive perdeu de 10 a 0… Então, com o caminho decidido, Shiro e Ive seguiram na direção da Floresta de Rafingart.</p>
+
+                
+        </article>
+        <div class="pagination">
+            <a href="capitulo6.html" id="prevPage" class="btn">Página Anterior</a>
+            <a href="index.html" class="btn">Próximo Capítulo</a>
+        </div>
+    </div>
+    <div class="side left"></div>
+    <div class="side right"></div>
+    <footer>
+        <p>&copy; 2024 R. Thomaz</p>
+    </footer>
+    <script>
+        let currentPage = 1;
+        const totalPages = 2; // Atualize com o número total de páginas do capítulo
+
+        function showPage(page) {
+            for (let i = 1; i <= totalPages; i++) {
+                document.getElementById(`page${i}`).classList.remove('active');
+            }
+            document.getElementById(`page${page}`).classList.add('active');
+            
+            // Atualizar visibilidade dos botões
+            document.getElementById('prevPage').classList.toggle('disabled', page === 1);
+            document.getElementById('nextPage').classList.toggle('disabled', page === totalPages);
+        }
+
+        document.getElementById('nextPage').addEventListener('click', function (e) {
+            e.preventDefault();
+            if (currentPage < totalPages) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        });
+
+        document.getElementById('prevPage').addEventListener('click', function (e) {
+            e.preventDefault();
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        });
+
+        showPage(currentPage);
+    </script>
+</body>
+</html>

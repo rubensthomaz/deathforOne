@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #f0f0f0;
+            position: relative;
+        }
+
+        .page {
+            display: none;
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1; /* Garante que o conteúdo principal fique acima das colunas laterais */
+        }
+
+        .page.active {
+            display: flex;
+        }
+
+        .pagination {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #6200ea;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #3700b3;
+        }
+
+        .btn.disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+
+        .chapter-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff5722; /* Cor laranja para destaque */
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .side {
+            position: fixed; /* Use fixed para as colunas laterais ficarem fixas */
+            top: 0;
+            bottom: 0;
+            width: 15%; /* Ajuste a largura conforme necessário */
+            background: no-repeat center center;
+            background-size: cover;
+            z-index: 0; /* Colunas laterais ficam atrás do conteúdo principal */
+        }
+
+        .side.left {
+            left: 0;
+            background-image: url('capa.jpg'); /* Imagem da coluna esquerda */
+        }
+
+        .side.right {
+            right: 0;
+            background-image: url('capa.jpg'); /* Imagem da coluna direita */
+        }
+    </style>
+</head>
+<body>
+    <div class="pagination">
+        <a href="index.html" id="prevPage" class="btn">Página Anterior</a>
+    </div>
+    <div class="page active" id="page1">
+        <h2 class="chapter-title">Agradecimentos</h2>
+        <p>Gostaria de expressar minha profunda gratidão a todos que tornaram este projeto possível. Primeiramente, agradeço à minha família e amigos pelo apoio incondicional e incentivo constante. Um agradecimento especial aos meus mentores e professores, cujos conselhos e ensinamentos foram fundamentais.</p>
+        <p>Também gostaria de agradecer aos meus colaboradores, especialmente [Nome do Colaborador], pela parceria e dedicação. Agradeço aos profissionais que contribuíram com suas habilidades, como [Nome do Editor] e [Nome do Designer], por seu trabalho excepcional.</p>
+        <p>Sou grato às instituições [Nome da Instituição] pelo suporte e recursos fornecidos. Aos meus leitores e seguidores, obrigado pelo apoio contínuo e feedback valioso. Por fim, agradeço a [Nome da Inspiração] por ser uma fonte constante de inspiração.</p>
+        <p>Este projeto não seria possível sem a contribuição de todos vocês. Muito obrigado!</p>
+    </div>
+    <div class="side left"></div>
+    <div class="side right"></div>
+    <footer>
+        <p>© 2024 R. Thomaz</p>
+    </footer>
+    <script>
+        let currentPage = 1;
+        const totalPages = 2; // Atualize com o número total de páginas do capítulo
+
+        function showPage(page) {
+            for (let i = 1; i <= totalPages; i++) {
+                document.getElementById(`page${i}`).classList.remove('active');
+            }
+            document.getElementById(`page${page}`).classList.add('active');
+            
+            // Atualizar visibilidade dos botões
+            document.getElementById('prevPage').classList.toggle('disabled', page === 1);
+            document.getElementById('nextPage').classList.toggle('disabled', page === totalPages);
+        }
+
+        document.getElementById('nextPage').addEventListener('click', function (e) {
+            e.preventDefault();
+            if (currentPage < totalPages) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        });
+
+        document.getElementById('prevPage').addEventListener('click', function (e) {
+            e.preventDefault();
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        });
+
+        showPage(currentPage);
+    </script>
+</body>
+</html>

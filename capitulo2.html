@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 2</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #121212;
+          color: #f0f0f0;
+          position: relative;
+      }
+  
+      .page {
+          display: none;
+          padding: 2rem;
+          max-width: 800px;
+          margin: auto;
+          background-color: #1e1e1e;
+          border-radius: 10px;
+          min-height: 100vh;
+          position: relative;
+          z-index: 1; /* Garante que o conteúdo principal fique acima das colunas laterais */
+      }
+  
+      .page.active {
+          display: block;
+      }
+  
+      .pagination {
+          text-align: center;
+          margin-top: 1rem;
+      }
+  
+      .btn {
+          display: inline-block;
+          padding: 1rem 2rem;
+          background-color: #6200ea;
+          color: #ffffff;
+          text-decoration: none;
+          border-radius: 5px;
+          transition: background-color 0.3s;
+      }
+  
+      .btn:hover {
+          background-color: #3700b3;
+      }
+  
+      .btn.disabled {
+          background-color: #cccccc;
+          cursor: not-allowed;
+      }
+  
+      footer {
+          text-align: center;
+          padding: 1rem;
+          background-color: #1e1e1e;
+          color: #ffffff;
+      }
+  
+      .chapter-title {
+          font-size: 2rem;
+          font-weight: bold;
+          color: #ff5722; /* Cor laranja para destaque */
+          text-align: center;
+          margin-bottom: 1rem;
+      }
+  
+      .illustration-container {
+          display: flex;
+          align-items: center; /* Alinha verticalmente o texto e a imagem */
+          margin: 1rem 0;
+      }
+  
+      .illustration-container .text {
+          flex: 1; /* Faz o texto ocupar o espaço restante */
+          margin-right: 1rem; /* Espaço entre o texto e a imagem */
+      }
+  
+      .illustration-container .illustration {
+          max-width: 200px; /* Ajuste conforme necessário */
+          height: auto;
+      }
+  
+      .side {
+          position: fixed; /* Use fixed para as colunas laterais ficarem fixas */
+          top: 0;
+          bottom: 0;
+          width: 15%; /* Ajuste a largura conforme necessário */
+          background: no-repeat center center;
+          background-size: cover;
+          z-index: 0; /* Colunas laterais ficam atrás do conteúdo principal */
+      }
+  
+      .side.left {
+          left: 0;
+          background-image: url('capa.jpg'); /* Imagem da coluna esquerda */
+      }
+  
+      .side.right {
+          right: 0;
+          background-image: url('capa.jpg'); /* Imagem da coluna direita */
+      }
+      </style>
+<body>
+    <div class="page active" id="page1">
+        <article>
+            <p class="chapter-title">Capítulo 2: O Primeiro Trabalho</p>
+            
+            <p>
+                Enquanto Shiro tentava compreender suas novas responsabilidades como ceifador, uma figura pequena e animada o irrompeu quando estava saindo de sua casa. Era Ive, a assistente da morte designada para auxiliá-lo em seu primeiro trabalho. Com seus cabelos vermelhos vibrantes e olhos pretos brilhantes, ela emanava uma energia contagiante, embora estivesse visivelmente estressada naquele momento.
+            </p>
+            <p>
+                "Shiro, querido, parece que finalmente estamos prontos para começar!", exclamou Ive, pulando de um lado para o outro com uma expressão entusiasmada. "Estou aqui para ser seu guia, seu apoio e, acima de tudo, sua companhia nessa nova jornada!"
+            </p>
+            <p>
+                Shiro observou-a com curiosidade misturada com apreensão. Ele estava começando a perceber que o mundo da morte era muito mais complexo do que imaginava, e a presença agitada de Ive só confirmava essa ideia.
+            </p>
+            <p>
+                "Que? Eu nem sei qual é o trabalho. Eu não sei nem o que fazer", perguntou Shiro, preparando-se para seu primeiro trabalho como ceifador.
+            </p>
+            <p>
+                Ive lançou-lhe um olhar animado, mas também sério. "Nossa primeira tarefa é colher uma alma no mundo espiritual que foi assassinada em um assalto. No entanto, há um problema: a alma se corrompeu e se transformou em uma figura monstruosa, influenciada pelos demônios que a assolam. Sua missão é derrotar essa alma corrompida e garantir que ela não escape para o reino dos vivos, rompendo o véu que separa os dois mundos."
+            </p>
+            <p>
+                Shiro engoliu em seco, sentindo um frio na espinha ao pensar na tarefa que tinha pela frente. Ele mal conseguia acreditar que sua primeira missão seria enfrentar uma criatura tão aterrorizante.
+            </p>
+            
+            <p>
+                "Perai, perai, você é acelerada. Como assim uma alma corrompida? Eu não faço a mínima ideia de como fazer isso", exclamou Shiro com indignação.
+            </p>
+            <p>
+                "Você vai lutar, não é óbvio? Esse é seu trabalho e lembra de uma coisa: você que fez o pacto, então é seu trabalho, não meu, Shiro", Ive respondeu com ironia.
+            </p>
+            <p>
+                Mas ele sabia que não tinha escolha a não ser enfrentar o desafio de frente. Com um estalar de dedos de Ive, eles foram para um mundo totalmente novo, o mundo espiritual onde as almas dos humanos iam para encontrar seu caminho.
+            
+                "É lindo, não é mesmo?" exclamou Ive.
+            </p>
+            <p>
+                "Nossa, que coisa irada!" respondeu Shiro com empolgação.
+            </p>
+            <p>
+                "Vai, não temos tempo. Siga essa estrada e, no final dela, você irá encontrar a alma", disse Ive empurrando Shiro pela costa, o apressando.
+            </p>
+            <p>
+                "Tá, tá, já estou indo", respondeu Shiro.
+            </p>
+            <p>
+                Shiro partiu correndo para o local onde a alma corrompida estava, preparando-se para a batalha que o aguardava. Enquanto se aproximava, ele sentia o peso da responsabilidade sobre seus ombros, mas também uma determinação crescia em seu coração para enfrentar qualquer desafio que surgisse em seu caminho.
+            </p>
+            <p>
+                O caminho até a alma corrompida era uma trilha sinuosa e obscura, ladeada por árvores retorcidas e sombrias. O ar estava impregnado com um silêncio opressivo, interrompido apenas pelo eco distante de uivos angustiados. Cada passo de Shiro era marcado pelo som de seus próprios pensamentos, enquanto ele se preparava mentalmente para o confronto iminente.
+            </p>
+            <p>
+                A luz fraca filtrada através das folhas retorcidas das árvores criava padrões estranhos e ondulantes no chão lamacento. O solo era irregular e instável, com raízes expostas e pedras afiadas que ameaçavam desequilibrar Shiro a cada passo. Mas ele avançou com determinação, seu objetivo era claro em sua mente.
+            </p>
+            <p>
+                Enquanto Shiro avançava pela trilha sombria, ele sentia uma sensação de inquietação se apossar dele. O ar estava carregado com uma energia sinistra, como se o próprio mundo estivesse reagindo à presença da alma corrompida. Ele apertou firmemente a empunhadura de sua foice da morte, preparando-se para o confronto que o aguardava.
+            </p>
+            <p>
+                A trilha se estendia diante dele, serpenteando através da paisagem desolada do mundo espiritual. O céu acima estava mergulhado em trevas, sem estrelas para orientá-lo em seu caminho.
+            </p>
+            <p>
+                Ive olhou para ele com preocupação, mas também com uma determinação firme. "Shiro, lembre-se", disse ela, sua voz soando séria e grave. "Se você morrer como ceifador, sua alma nunca descansará. Ela ficará presa em um tormento eterno, como uma poeira perdida no vento. Você precisa permanecer forte e concentrado, pois sua própria sobrevivência depende disso."
+            </p>
+            <p>
+                "Poderia ter me avisado isso antes de eu aceitar aquele contrato", disse Shiro furioso.
+            </p>
+            <p>
+                Shiro se preparou para enfrentar o desafio que se aproximava, sabendo que precisava ser forte para enfrentar a batalha que ainda estava por vir. Este seria apenas o começo de sua jornada como ceifador, uma jornada repleta de perigos, desafios e descobertas que mudariam sua vida para sempre.
+            </p>
+            <p>
+                Quando avistou a alma, Shiro olhou horrorizado para aquela alma, se é que se pode dizer que aquilo ainda era alguma coisa. Suas pernas tremiam, o ar em seus pulmões parou de circular, mas ele não deixou o medo o controlar. Não pensou duas vezes e correu para cima da alma corrompida, cuja forma distorcida e grotesca era um testemunho da influência demoníaca que a assolava. Ele mal conseguia reconhecer a figura que um dia fora humana, agora transformada em uma monstruosidade aterrorizante, com olhos vazios brilhando com uma aura sombria. A batalha começou com uma intensidade avassaladora.
+           
+                Shiro sentiu o medo se acumulando em seu peito enquanto a alma corrompida avançava em sua direção, emitindo uivos de agonia e raiva. Ele empunhava uma das foices da morte com determinação, embora sua inexperiência fosse evidente. Mesmo ele não sabendo como usar completamente o poder das foices ou controlar seus poderes recém-adquiridos.
+            </p>
+            <p>
+                A paisagem ao redor deles era desoladora e sombria. Árvores retorcidas se erguiam ao redor, seus galhos se estendendo como dedos gnarls em direção ao céu escuro. O solo era irregular e lamacento, com poças de água negra espalhadas por toda parte. O ar estava impregnado com o cheiro de podridão e desespero, um eco do sofrimento que permeia aquele reino espiritual.
+            </p>
+            <p>
+                A alma corrompida investiu contra Shiro com uma ferocidade implacável, lançando golpes poderosos que o forçaram a recuar. Shiro lutou para se defender, bloqueando os ataques da criatura com sua foice enquanto tentava encontrar uma abertura para contra-atacar. Mas a alma corrompida era rápida e ágil, e Shiro mal conseguia acompanhar seus movimentos.
+            </p>
+            <p>
+                Ive observava a batalha com crescente preocupação, seus olhos estavam fixos em Shiro enquanto ele lutava contra aquele adversário implacável. Ela sabia que ele estava enfrentando uma tarefa quase impossível, especialmente sem dominar completamente suas habilidades como ceifador. Mas ela também sabia que não podia se intrometer na batalha porque aquilo mostraria se Shiro estaria apto ou não para ser um ceifeiro.
+            </p>
+            <p>
+                Enquanto a batalha se desenrolava, Shiro começou a sentir o peso da luta pesando sobre ele. Seus movimentos se tornaram mais lentos e desajeitados, e ele lutava para manter sua concentração diante do ataque incessante da alma corrompida. Cada golpe que ele sofria era como uma punhalada em seu coração, apesar da escuridão opressiva e da atmosfera sombria, ele se recusava a desistir.
+            </p>
+            <p>
+                A criatura avançou na sua direção com uma velocidade incrível. Antes que ele conseguisse desviar, ela mordeu o seu ombro direito. Shiro ignorou totalmente a dor e reuniu um último esforço para não desperdiçar aquela abertura. Ele concentrou suas forças restantes e desferiu um golpe poderoso contra a alma corrompida. A criatura soltou um grito angustiado quando a foice da morte cortou através de sua forma distorcida, dissipando-a em uma nuvem de escuridão. A batalha
+            
+        </article>
+        <div class="pagination">
+            <a href="capitulo1.html" id="prevPage" class="btn">Página Anterior</a>
+            <a href="capitulo3.html" class="btn">Próximo Capítulo</a>
+        </div>
+    </div>
+    <div class="side left"></div>
+    <div class="side right"></div>
+    <footer>
+        <p>&copy; 2024 R. Thomaz</p>
+    </footer>
+    <script>
+        let currentPage = 1;
+        const totalPages = 2; // Atualize com o número total de páginas do capítulo
+
+        function showPage(page) {
+            for (let i = 1; i <= totalPages; i++) {
+                document.getElementById(`page${i}`).classList.remove('active');
+            }
+            document.getElementById(`page${page}`).classList.add('active');
+            
+            // Atualizar visibilidade dos botões
+            document.getElementById('prevPage').classList.toggle('disabled', page === 1);
+            document.getElementById('nextPage').classList.toggle('disabled', page === totalPages);
+        }
+
+        document.getElementById('nextPage').addEventListener('click', function (e) {
+            e.preventDefault();
+            if (currentPage < totalPages) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        });
+
+        document.getElementById('prevPage').addEventListener('click', function (e) {
+            e.preventDefault();
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        });
+
+        showPage(currentPage);
+    </script>
+</body>
+</html>

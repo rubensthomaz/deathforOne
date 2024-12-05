@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 6</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #121212;
+          color: #f0f0f0;
+          position: relative;
+      }
+  
+      .page {
+          display: none;
+          padding: 2rem;
+          max-width: 800px;
+          margin: auto;
+          background-color: #1e1e1e;
+          border-radius: 10px;
+          min-height: 100vh;
+          position: relative;
+          z-index: 1; /* Garante que o conteúdo principal fique acima das colunas laterais */
+      }
+  
+      .page.active {
+          display: block;
+      }
+  
+      .pagination {
+          text-align: center;
+          margin-top: 1rem;
+      }
+  
+      .btn {
+          display: inline-block;
+          padding: 1rem 2rem;
+          background-color: #6200ea;
+          color: #ffffff;
+          text-decoration: none;
+          border-radius: 5px;
+          transition: background-color 0.3s;
+      }
+  
+      .btn:hover {
+          background-color: #3700b3;
+      }
+  
+      .btn.disabled {
+          background-color: #cccccc;
+          cursor: not-allowed;
+      }
+  
+      footer {
+          text-align: center;
+          padding: 1rem;
+          background-color: #1e1e1e;
+          color: #ffffff;
+      }
+  
+      .chapter-title {
+          font-size: 2rem;
+          font-weight: bold;
+          color: #ff5722; /* Cor laranja para destaque */
+          text-align: center;
+          margin-bottom: 1rem;
+      }
+  
+      .illustration-container {
+          display: flex;
+          align-items: center; /* Alinha verticalmente o texto e a imagem */
+          margin: 1rem 0;
+      }
+  
+      .illustration-container .text {
+          flex: 1; /* Faz o texto ocupar o espaço restante */
+          margin-right: 1rem; /* Espaço entre o texto e a imagem */
+      }
+  
+      .illustration-container .illustration {
+          max-width: 200px; /* Ajuste conforme necessário */
+          height: auto;
+      }
+  
+      .side {
+          position: fixed; /* Use fixed para as colunas laterais ficarem fixas */
+          top: 0;
+          bottom: 0;
+          width: 15%; /* Ajuste a largura conforme necessário */
+          background: no-repeat center center;
+          background-size: cover;
+          z-index: 0; /* Colunas laterais ficam atrás do conteúdo principal */
+      }
+  
+      .side.left {
+          left: 0;
+          background-image: url('capa.jpg'); /* Imagem da coluna esquerda */
+      }
+  
+      .side.right {
+          right: 0;
+          background-image: url('capa.jpg'); /* Imagem da coluna direita */
+      }
+      </style>
+<body>
+    <div class="page active" id="page1">
+        <article>
+            <p class="chapter-title">Capítulo 6: A Batalha Contra o Traidoro</p>
+            
+            <p>A noite caía sobre os reinos espirituais quando Shiro e Ive partiram em mais uma missão como ceifadores. O ar estava impregnado com o cheiro de terra úmida e uma tensão palpável pairava no ar, como se a própria escuridão estivesse à espreita nas sombras. As estrelas cintilavam timidamente no céu noturno, lançando uma luz fraca sobre o campo de batalha iminente.</p>
+
+            <p>Ao se aproximarem do local designado, Shiro e Ive podiam ouvir o som distante de gritos e sussurros sombrios, ecoando entre as árvores retorcidas. O vento sibilava entre as folhas secas, carregando consigo uma sensação de inquietude e perigo iminente.</p>
+            
+            <p>Quando avistaram a alma que deveriam coletar, uma sensação de apreensão os envolveu. A figura solitária parecia pequena e frágil contra a escuridão que a rodeava, seu lamento ecoando como um eco distante da morte iminente.</p>
+            
+            <p>No entanto, antes que pudessem agir, foram surpreendidos por um ceifador que emergiu das sombras, um sorriso sinistro estampado em seu rosto. Seus passos ecoavam no chão de pedra, criando uma sensação de inevitabilidade que arrepiava a espinha de Shiro e Ive.</p>
+            
+            <p>Klaus Luterin era uma figura intimidante, com uma estatura imponente e um olhar penetrante que parecia enxergar até a alma. Seu cabelo negro como a noite caía em mechas desgrenhadas sobre o seu rosto, e seus olhos eram como duas brasas ardentes, faiscando com malícia e crueldade. Um sorriso sádico curvava seus lábios finos, revelando fileiras de dentes afiados como lâminas.</p>
+            
+            <p>"Shiro, Ive, que prazer em conhecê-los formalmente, eu me chamo Klaus Luterin", disse Klaus com um tom de falsa cortesia. "Espero que não se importem se eu tomar emprestada essa alma para meus próprios propósitos."</p>
+            
+            <p>Antes que pudessem reagir, uma armadilha foi acionada, e Shiro se viu horrorizado quando Ive foi capturada por correntes sombrias.</p>
+            
+            <p>"Iveeeee!", gritou Shiro, sua voz ecoando com desespero. Ele sabia que precisava agir rápido para salvar Ive e derrotar aquele inimigo.</p>
+            
+            <p>Klaus lançou um olhar zombeteiro para Shiro. "Parece que você está em uma situação complicada, meu caro amigo. Mas não se preocupe, estou disposto a oferecer uma barganha. Se você desistir de lutar, talvez eu considere poupar a vida de sua amiga."</p>
+            
+            <p>Shiro apertou os punhos com raiva, sua mente trabalhando freneticamente em busca de uma solução. Ele sabia que não podia desistir, não quando a vida de Ive estava em perigo.</p>
+            
+            <p>Com um grito, Shiro avançou para o combate, suas foices da morte brilhando com uma luz ardente. A batalha que se seguiu foi intensa e implacável, com Shiro desferindo golpes precisos e evitando os ataques de Klaus com habilidade e agilidade.</p>
+            
+            <p>Apesar dos esforços de Klaus para detê-lo, Shiro se recusou a recuar. Ele canalizou toda sua força e aura em seus ataques, cada golpe impulsionado pela vontade de proteger Ive e derrotar seu inimigo.</p>
+            
+            <p>No entanto, durante a luta, Klaus Luterin revelou seu verdadeiro poder. Ele brandiu uma lança negra, emanando uma aura sombria que envolveu o campo de batalha em trevas, deixando Shiro sem conseguir ver nada à sua frente. Com essa habilidade, Klaus conseguiu pegá-lo desprevenido numa abertura que Shiro havia dado, derrubando-o e espancando-o impiedosamente com sequências de socos intermináveis, suas palavras aterrorizantes ecoando em sua mente a cada soco que Klaus deferia.</p>
+            
+            <p>"Você é fraco, Shiro. Tão fraco que nem mesmo pode proteger sua amiga. Ive será um ótimo brinquedo para minha coleção."</p>
+            
+            <p>Shiro sentiu um poder sombrio, porém aconchegante, se apoderar dele. Por um momento, ele sentiu-se perdido na escuridão, mas uma força interior o impeliu a reagir. Em um momento, Shiro lançou Klaus para o alto, fazendo-o voar a metros de distância e cair no chão, sua aura mudando completamente.</p>
+            
+            <p>O rosto de Shiro não era mais aquele rosto gentil e determinado. Seus olhos brilhavam como sangue, uma aura sombria e obscura o envolveu. Ele pegou suas foices e sentiu-as tremendo com um sentimento de ódio puro e imaculado. Por um breve momento, ele ouviu sussurros sinistros em sua mente: MATE-O, MATE-O.</p>
+            
+            <p>Shiro sentiu um poder consumindo-o e, num piscar de olhos, arrancou um dos braços de Klaus, que caiu no chão agonizando. Klaus, agora apavorado, tentou atacar Shiro, mas ele bloqueou o golpe com facilidade. Shiro segurou o rosto de Klaus com uma força sobre-humana e começou a arrancar o braço de Klaus de uma forma diabólica e devagar, tornando o processo agonizante para quem estava vendo e para quem estava sofrendo aquilo. Shiro arrancou o braço de Klaus, que caiu de joelhos enquanto um sorriso diabólico se formava em seus lábios. Klaus gritou de dor enquanto caía de joelhos, seu semblante lembrando o da própria morte.</p>
+            
+            <p>Ive olhou espantada para a cena, horrorizada com a transformação de Shiro. "Para, Shiro! Por favor!", gritou ela desesperada.</p>
+            
+            <p>Em um momento de lucidez, a voz de Ive ecoou no subconsciente de Shiro, trazendo-o de volta à realidade. Ele largou o braço de Klaus e olhou para suas mãos trêmulas e ensanguentadas, horrorizado com o que havia feito.</p>
+            
+            <p>O choque da transformação ainda ecoava em sua mente. Shiro lutou para controlar a escuridão que o consumira por um breve momento. Ele olhou para Ive, vendo o medo refletido em seus olhos, e sentiu um aperto no coração. "Então era disso que aquele demônio queria dizer?" As palavras iam se formando em sua mente enquanto ele olhava para o que tinha feito. Como ele poderia ter deixado a escuridão tomar conta de si mesmo assim?</p>
+            
+            <p>Ele sabia que precisava se recompor e proteger Ive a todo custo. Mesmo que a escuridão ainda estivesse à espreita, ele não permitiria que ela o dominasse novamente.</p>
+            
+            <p>Enquanto isso, Klaus Luterin gemia de dor no chão, com uma expressão de horror e incredulidade. Ele nunca esperava encontrar uma oposição tão feroz, especialmente de alguém que considerava fraco.</p>
+            
+            <p>"Você... você é um monstro", murmurou Klaus com dificuldade, seus olhos arregalados de terror.</p>
+            
+            <p>Shiro cerrou os punhos, sentindo uma mistura de raiva e remorso. Ele sabia que aquilo não era quem ele era verdadeiramente, mas também sabia que precisava enfrentar as consequências de suas ações.</p>
+            
+            <p>Com passos frios, Shiro se aproximou de Klaus, sua expressão agora era séria. "Eu não sou um monstro", disse ele com firmeza. "Mas não vou permitir que você saia daqui."</p>
+            
+            <p>Com um movimento rápido, Shiro ergueu a lança de Klaus, algo tecnicamente impossível para os ceifadores. Sentindo o peso da arma em suas mãos, ele girou-a e, com um golpe, arrancou as pernas de Klaus.</p>
+            
+            <p>Ive observava com apreensão, temendo o que poderia acontecer a seguir. Ela sabia que Shiro estava lutando contra algo muito maior do que qualquer um deles poderia compreender completamente.</p>
+            
+            <p>Ive viu quando Shiro jogou a lança de Klaus para longe, afastando-se do poder corrompido que ela representava. Então, Shiro segurou pela blusa de Klaus e começou a dar socos em seu rosto, cada um fazendo a terra tremer. Os olhos de Shiro começaram a ficar da cor vermelho sangue mais uma vez. Vendo que Shiro poderia perder o controle mais uma vez, Ive correu e abraçou Shiro por trás, envolvendo-o em um abraço reconfortante, dizendo: “Acabou, Shiro! Você venceu. Eu estou bem. Você conseguiu.”</p>
+            
+            <p>Shiro olhou para Ive, seus olhos mostrando remorso, vergonha, dor e sofrimento. Ele largou o corpo de Klaus no chão, seu rosto era irreconhecível.</p>
+            
+            <p>"Você está bem?", perguntou Ive, preocupada com o estado de Shiro.</p>
+            
+            <p>Shiro assentiu, sentindo uma onda de arrependimento e vergonha, mas Ive estava segura. Isso que importava.</p>
+            
+            <p>Enquanto Shiro e Ive se recuperavam do confronto com Klaus, Klaus estava caído no chão sobre uma poça de sangue e pedaços do seu corpo espalhados ao redor, uma sensação de desconforto pairava no ar. Shiro ainda sentia a presença sombria dentro de si, uma lembrança constante de que ele não estava imune à influência da escuridão </p>
+
+            <p>"O que... o que aconteceu comigo?", murmurou Shiro, sua voz carregada de confusão e preocupação. Ele não conseguia entender como havia sido capaz de sucumbir tão facilmente à escuridão que o assombrava.</p>
+
+<p>Ive colocou uma mão reconfortante no ombro de Shiro, oferecendo-lhe um sorriso tranquilizador. "Você não está sozinho, Shiro", disse ela suavemente. "Todos nós temos nossos próprios demônios para enfrentar. O importante é que você reconheceu a escuridão dentro de si e escolheu resistir a ela."</p>
+
+<p>Shiro assentiu, sentindo-se grato pela presença reconfortante de Ive ao seu lado. Ele sabia que não poderia enfrentar seus próprios demônios sozinho, mas com Ive ao seu lado, ele se sentia mais forte e mais determinado do que nunca.</p>
+
+<p>Enquanto isso, Klaus Luterin soltou um gemido, seu rosto desfigurado era quase impossível acreditar que ele ainda estava vivo, depois de tudo.</p>
+
+<p>"Você... você vai se arrepender por isso", murmurou Klaus com dificuldade, suas palavras soando como um eco distante.</p>
+
+<p>Shiro olhou para Klaus com uma expressão séria. Ele sabia que Klaus não era o último desafio que enfrentaria em sua jornada como ceifador, mas estava determinado a enfrentar qualquer obstáculo que o destino lhe reservasse.</p>
+
+<p>Com um último olhar para Klaus, Shiro virou-se para Ive. "Vamos voltar", disse ele com firmeza. "Temos um longo caminho pela frente."</p>
+
+<p>Ive sorriu, sentindo a determinação de Shiro. E assim, Shiro e Ive deixaram para trás o campo de batalha, prontos para enfrentar o que quer que o futuro lhes reservasse. Unidos, eles enfrentariam os desafios que se apresentavam, sabendo que, juntos, poderiam superar qualquer obstáculo e triunfar sobre a escuridão que ameaçava consumi-los.</p>
+
+        </article>
+        <div class="pagination">
+            <a href="capitulo5.html" id="prevPage" class="btn">Página Anterior</a>
+            <a href="capitulo7.html" class="btn">Próximo Capítulo</a>
+        </div>
+    </div>
+    <div class="side left"></div>
+    <div class="side right"></div>
+    <footer>
+        <p>&copy; 2024 R. Thomaz</p>
+    </footer>
+    <script>
+        let currentPage = 1;
+        const totalPages = 2; // Atualize com o número total de páginas do capítulo
+
+        function showPage(page) {
+            for (let i = 1; i <= totalPages; i++) {
+                document.getElementById(`page${i}`).classList.remove('active');
+            }
+            document.getElementById(`page${page}`).classList.add('active');
+            
+            // Atualizar visibilidade dos botões
+            document.getElementById('prevPage').classList.toggle('disabled', page === 1);
+            document.getElementById('nextPage').classList.toggle('disabled', page === totalPages);
+        }
+
+        document.getElementById('nextPage').addEventListener('click', function (e) {
+            e.preventDefault();
+            if (currentPage < totalPages) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        });
+
+        document.getElementById('prevPage').addEventListener('click', function (e) {
+            e.preventDefault();
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        });
+
+        showPage(currentPage);
+    </script>
+</body>
+</html>

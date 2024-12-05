@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 4</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #121212;
+          color: #f0f0f0;
+          position: relative;
+      }
+  
+      .page {
+          display: none;
+          padding: 2rem;
+          max-width: 800px;
+          margin: auto;
+          background-color: #1e1e1e;
+          border-radius: 10px;
+          min-height: 100vh;
+          position: relative;
+          z-index: 1; /* Garante que o conteúdo principal fique acima das colunas laterais */
+      }
+  
+      .page.active {
+          display: block;
+      }
+  
+      .pagination {
+          text-align: center;
+          margin-top: 1rem;
+      }
+  
+      .btn {
+          display: inline-block;
+          padding: 1rem 2rem;
+          background-color: #6200ea;
+          color: #ffffff;
+          text-decoration: none;
+          border-radius: 5px;
+          transition: background-color 0.3s;
+      }
+  
+      .btn:hover {
+          background-color: #3700b3;
+      }
+  
+      .btn.disabled {
+          background-color: #cccccc;
+          cursor: not-allowed;
+      }
+  
+      footer {
+          text-align: center;
+          padding: 1rem;
+          background-color: #1e1e1e;
+          color: #ffffff;
+      }
+  
+      .chapter-title {
+          font-size: 2rem;
+          font-weight: bold;
+          color: #ff5722; /* Cor laranja para destaque */
+          text-align: center;
+          margin-bottom: 1rem;
+      }
+  
+      .illustration-container {
+          display: flex;
+          align-items: center; /* Alinha verticalmente o texto e a imagem */
+          margin: 1rem 0;
+      }
+  
+      .illustration-container .text {
+          flex: 1; /* Faz o texto ocupar o espaço restante */
+          margin-right: 1rem; /* Espaço entre o texto e a imagem */
+      }
+  
+      .illustration-container .illustration {
+          max-width: 200px; /* Ajuste conforme necessário */
+          height: auto;
+      }
+  
+      .side {
+          position: fixed; /* Use fixed para as colunas laterais ficarem fixas */
+          top: 0;
+          bottom: 0;
+          width: 15%; /* Ajuste a largura conforme necessário */
+          background: no-repeat center center;
+          background-size: cover;
+          z-index: 0; /* Colunas laterais ficam atrás do conteúdo principal */
+      }
+  
+      .side.left {
+          left: 0;
+          background-image: url('capa.jpg'); /* Imagem da coluna esquerda */
+      }
+  
+      .side.right {
+          right: 0;
+          background-image: url('capa.jpg'); /* Imagem da coluna direita */
+      }
+      </style>
+<body>
+    <div class="page active" id="page1">
+        <article>
+            <p class="chapter-title">Capítulo 4: Desafios Inesperados</p>
+            <p>Enquanto Shiro e Ive continuavam seu treinamento como ceifadores, uma ameaça sombria pairava sobre eles. Uma tempestade repentina e furiosa desabou sobre o campo de treinamento, lançando-os em um turbilhão de perigo e incerteza.</p>
+
+            <p>Ive olhou para o céu com uma expressão tensa, sua intuição aguçada alertando-a para o perigo iminente. Ela sabia que aquela tempestade não era uma simples obra da natureza, mas sim um ataque planejado por um demônio malévolo, determinado a atrapalhar o treinamento de Shiro.</p>
+            
+            <p>"Shiro, precisamos ser rápidos", disse Ive, sua voz carregada de preocupação enquanto ela lançava um olhar ansioso para o céu tempestuoso. "Esta tempestade não é natural. Alguma coisa está tentando nos atacar desprevenidos."</p>
+            
+            <p>Shiro sentiu um arrepio de apreensão percorrer sua espinha. Ele sabia que enfrentaria alguns monstros, mas nada tão hostil.</p>
+            
+            <p>Com o coração acelerado, Shiro e Ive se apressaram em buscar abrigo, lutando contra os ventos fortes e a chuva torrencial. A cada passo, eles podiam sentir a presença sinistra do demônio se aproximando, sua energia escura envolvendo-os como uma sombra ameaçadora.</p>
+            
+            <p>Depois de correrem pela floresta, avistaram uma montanha com cavernas. "Finalmente", exclamou Ive, e eles conseguiram encontrar um refúgio temporário em uma caverna próxima, onde puderam se abrigar da fúria da tempestade. No entanto, eles sabiam que o perigo ainda não havia passado.</p>
+            
+            <p>Enquanto esperavam a tempestade diminuir, Shiro e Ive compartilharam um olhar determinado. Eles sabiam que enfrentar algo seria uma batalha difícil já que não sabiam quem era, e nem o que era, mas estavam determinados a continuar sua jornada como ceifadores.</p>
+            
+            <p>Com a tempestade rugindo do lado de fora, Shiro e Ive se prepararam mentalmente para o desafio que os aguardava. Eles sabiam que teriam que permanecer unidos e confiantes em sua determinação se quisessem sair vitoriosos contra o inimigo que se aproximava.</p>
+            
+            <p>Enquanto aguardavam o momento de enfrentar seu adversário, Shiro e Ive juraram proteger um ao outro e garantir que nada nem ninguém os impedisse de cumprir seu destino como ceifadores. Eles estavam prontos para enfrentar qualquer desafio que surgisse em seu caminho, armados com coragem e uma determinação inabalável.</p>
+            
+            <p>Enquanto a tempestade rugia do lado de fora da caverna, Shiro e Ive mantinham-se alertas, cientes da presença sinistra que os rodeava. O ar dentro da caverna tornou-se pesado com a tensão, enquanto aguardavam o momento de confronto.</p>
+            
+            <p>Ive lançou um olhar preocupado para Shiro, seus olhos refletindo a determinação misturada com ansiedade. "Shiro, precisamos nos preparar para o que está por vir", disse ela, sua voz firme apesar do nervosismo. "É um demônio e ele não vai desistir facilmente."</p>
+            
+            <p>“Peraí, um demônio?” respondeu Shiro.</p>
+            
+            <p>Ive estava com um olhar preocupado. “Sim, mas você consegue derrotar. Eu acredito em você.”</p>
+            
+            <p>Shiro assentiu, compartilhando a mesma determinação de Ive. Ele sabia que enfrentar um demônio não seria tarefa fácil, mas estava determinado a proteger seu futuro como ceifador.</p>
+            
+            <p>Enquanto esperavam pelo confronto iminente, Shiro aproveitou a oportunidade para concentrar-se em sua energia espiritual, buscando fortalecer sua conexão com as foices da morte. Ele podia sentir a energia pulsando ao seu redor, uma manifestação de sua determinação em enfrentar o perigo que se aproximava.</p>
+            
+            <p>Ive observou Shiro com admiração, impressionada com sua coragem e sua capacidade de se concentrar mesmo diante da adversidade.</p>
+            
+            <p>Finalmente, o som de passos pesados ecoou do lado de fora da caverna, anunciando a chegada do demônio. Shiro e Ive trocaram olhares determinados antes de se prepararem para o confronto que os aguardava.</p>
+            
+            <p>Com um último suspiro, Shiro e Ive saíram da caverna, prontos para enfrentar o demônio e proteger seu treinamento como ceifadores. Eles sabiam que a batalha à frente seria difícil, mas estavam determinados a sair vitoriosos e continuar sua jornada rumo ao domínio de suas habilidades como ceifadores.</p>
+            
+            <p>Ao saírem da caverna, Shiro e Ive sentiram um calafrio percorrer sua espinha ao encarar as feições distorcidas do demônio. Suas garras afiadas faiscavam à luz das chamas, e suas asas negras batiam lentamente, enchendo o ar com um vento gélido, seus olhos negros com a noite e um sorriso malévolo nos lábios. Sua presença exalava uma aura de escuridão e poder, enchendo ao redor deles uma sensação de opressão e desespero.</p>
+            
+            <p>Shiro ergueu sua foice da morte, preparando-se para o confronto iminente. Ele podia sentir a energia pulsando através dele, uma mistura de determinação e adrenalina enquanto se preparava para enfrentar seu adversário.</p>
+            
+            <p>Ive ficou ao lado de Shiro, sua própria foice pronta para o combate. Apesar do medo que sentia, ela sabia que precisava permanecer forte e apoiar Shiro nesta batalha crucial.</p>
+            
+            <p>Enquanto Shiro e Ive se preparavam para enfrentar o demônio, este lançou um olhar penetrante para Shiro, seus olhos brilhando com um brilho sinistro.</p>
+            
+            <p>Demônio: "Então, você é o novo ceifador que está causando alvoroço no mundo espiritual... Interessante."</p>
+            
+            <p>Shiro manteve sua postura firme, encarando o demônio com determinação. "E você deve ser aquele que vai tentar nos deter, eu suponho", respondeu ele, sua voz ecoando com confiança.</p>
+            
+            <p>O demônio soltou uma risada sombria, um sorriso sardônico curvando seus lábios. "Você tem coragem, ceifador, mas ainda é um novato nesse jogo sombrio. Você não tem ideia do que está em jogo."</p>
+            
+            <p>Enquanto os dois se preparavam para lutar, o demônio continuou, seu tom carregado de mistério e sarcasmo. "Você acha que é forte, mas ainda não percebeu o verdadeiro poder que reside dentro de você. Sua alma é um campo fértil para a corrupção, e em breve ela florescerá em toda sua escuridão."</p>
+            
+            <p>Shiro sentiu um arrepio percorrer sua espinha, mas ele não recuou. Em vez disso, ele apertou ainda mais sua foice, determinado a derrotar o demônio e proteger sua própria alma da corrupção.</p>
+            
+            <p>O demônio avançou lentamente, suas garras brilhando à luz das chamas. Ele parecia radiante com uma energia antiga e poderosa, uma força da natureza implacável e aterrorizante.</p>
+            
+            <p>Com um gesto de sua mão retorcida, o demônio conjurou sombras sinistras que dançavam ao seu redor, assumindo formas monstruosas que enchiam a caverna com uma aura de horror. As sombras se retorciam e se contorciam, prontas para devorar qualquer coisa que se interpusesse em seu caminho.</p>
+            
+            <p>O demônio lançou uma série de ataques poderosos contra Shiro e Ive. Eles lutaram com todas as suas forças, cada golpe e esquiva impulsionados pela determinação de proteger seu treinamento e uns aos outros.</p>
+            
+            <p>Apesar da ferocidade do demônio, Shiro e Ive se mantiveram firmes, sua determinação inabalável guiando-os através da batalha. Com cada golpe que desferiram, eles se aproximavam mais da vitória, até finalmente conseguirem banir o demônio de volta para as sombras de onde veio, com Ive se colocando como isca para distrair o demônio enquanto Shiro fazia uma investida por trás e apunhalava-o no meio das costas, com as duas foices.</p>
+            
+            <p>Ofegantes e exaustos, Shiro e Ive trocaram um olhar de alívio e gratidão. Eles haviam enfrentado um desafio formidável juntos e emergido vitoriosos, mais fortes e unidos do que nunca.</p>
+                           
+        </article>
+        <div class="pagination">
+            <a href="capitulo3.html" id="prevPage" class="btn">Página Anterior</a>
+            <a href="capitulo5.html" class="btn">Próximo Capítulo</a>
+        </div>
+    </div>
+    <div class="side left"></div>
+    <div class="side right"></div>
+    <footer>
+        <p>&copy; 2024 R. Thomaz</p>
+    </footer>
+    <script>
+        let currentPage = 1;
+        const totalPages = 2; // Atualize com o número total de páginas do capítulo
+
+        function showPage(page) {
+            for (let i = 1; i <= totalPages; i++) {
+                document.getElementById(`page${i}`).classList.remove('active');
+            }
+            document.getElementById(`page${page}`).classList.add('active');
+            
+            // Atualizar visibilidade dos botões
+            document.getElementById('prevPage').classList.toggle('disabled', page === 1);
+            document.getElementById('nextPage').classList.toggle('disabled', page === totalPages);
+        }
+
+        document.getElementById('nextPage').addEventListener('click', function (e) {
+            e.preventDefault();
+            if (currentPage < totalPages) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        });
+
+        document.getElementById('prevPage').addEventListener('click', function (e) {
+            e.preventDefault();
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        });
+
+        showPage(currentPage);
+    </script>
+</body>
+</html>

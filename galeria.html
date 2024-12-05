@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interativo dos Reinos</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Adicione isso para evitar barras de rolagem devido ao efeito parallax */
+        }
+
+       
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #6200ea;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            position: absolute; /* Faz o botão flutuar sobre a imagem de fundo */
+            top: 20px; /* Ajuste a posição conforme necessário */
+            left: 20px; /* Ajuste a posição conforme necessário */
+            z-index: 1000; /* Garante que o botão fique acima da imagem de fundo */
+        }
+
+        .btn:hover {
+            background-color: #3700b3;
+        }
+
+        .btn.disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #060606;
+            color: #ffffff;
+        }
+
+       
+        #mapa {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden; /* Garante que as partículas não saiam do mapa */
+}
+
+        /* Canvas do Particles.js */
+       
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Coloca o efeito de partículas atrás dos outros elementos */
+        }
+
+        /* Estilo para os reinos */
+        .reino {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            border-radius: 50%;
+            cursor: pointer;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border: 2px solid transparent; /* Inicialmente sem borda */
+        }
+
+        .reino:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.911);
+            border: 2px solid #fff; /* Borda visível ao passar o mouse */
+        }
+
+        .music-icon {
+            position: fixed;
+            top: 50px;
+            left: 140px;
+            font-size: 2rem; /* Tamanho do ícone */
+            cursor: pointer;
+            z-index: 1000; /* Garante que o ícone fique acima de outros elementos */
+            transition: transform 0.3s ease;
+        }
+
+        .music-icon:hover {
+            transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
+        }
+
+        .modal {
+            display: none; /* Inicialmente escondido */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #descricao {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: white;
+            max-width: 80%;
+            text-align: center;
+        }
+
+      /* Efeito Parallax */
+.parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('fundo.jpg'); /* Imagem de fundo para o efeito parallax */
+    background-size: cover; /* Cobre toda a área do contêiner */
+    background-attachment: fixed; /* Mantém a imagem fixa enquanto rola */
+    background-position: center center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    z-index: -2; /* Coloca o efeito parallax atrás dos reinos e partículas */
+    transform: translateZ(-1px) scale(1.5); /* Ajusta o efeito de profundidade */
+}
+
+/* Canvas do Particles.js */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca o efeito de partículas atrás dos outros elementos */
+}
+
+
+        /* Posicionando os reinos */
+        #centro {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url('centro.jpg'); /* Imagem para o Centro */
+        }
+
+        #sul {
+            bottom: 7%; /* Alinhado ao canto inferior central */
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: url('espadas.jpeg'); /* Imagem para o Reino de Espadas */
+        }
+
+        #norte {
+            top: 7%; /* Alinhado ao canto superior central */
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: url('paus.jpeg'); /* Imagem para o Reino de Paus */
+        }
+
+        #leste {
+            top: 50%;
+            right: 29%; /* Alinhado ao canto direito central */
+            transform: translateY(-50%);
+            background-image: url('Ouros.jpeg'); /* Imagem para o Reino de Ouros */
+        }
+
+        #oeste {
+            top: 50%;
+            left: 29%; /* Alinhado ao canto esquerdo central */
+            transform: translateY(-50%);
+            background-image: url('copas.jpeg'); /* Imagem para o Reino de Copas */
+        }
+    </style>
+</head>
+<body>
+    <div class="pagination">
+        <a href="index.html" id="prevPage" class="btn">Página Anterior</a>
+    </div>
+   
+    <div id="mapa">
+        <!-- Adicione o canvas do Particles.js -->
+        <div id="particles-js"></div>
+        <div id="centro" class="reino" data-reino="Ordem dos Ceifeiros"></div>
+        <div id="sul" class="reino" data-reino="Reino de Espadas"></div>
+        <div id="norte" class="reino" data-reino="Reino de Paus"></div>
+        <div id="leste" class="reino" data-reino="Reino de Ouros"></div>
+        <div id="oeste" class="reino" data-reino="Reino de Copas"></div>
+        <div id="fundo" class="parallax"></div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">Reino</h2>
+            <p id="modal-description">Descrição do reino.</p>
+        </div>
+    </div>
+    <audio id="click-sound" src="musica.mp3" preload="auto"></audio>
+    <div id="music-icon" class="music-icon">🎵</div>
+
+    <div id="descricao"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            const clickSound = document.getElementById('click-sound');
+            
+            // Reproduz a música quando a página carrega
+            document.getElementById('music-icon').addEventListener('click', function() {
+                clickSound.play().catch(error => {
+                    console.log('Erro ao reproduzir a música:', error);
+                });
+            });
+
+            // Manipulação dos eventos dos reinos
+            document.querySelectorAll('.reino').forEach(reino => {
+                // Mostrar descrição ao passar o mouse sobre o reino
+                reino.addEventListener('mouseenter', function() {
+                    const descricao = document.getElementById('descricao');
+                    descricao.textContent = this.getAttribute('data-reino');
+                    descricao.style.opacity = 1;
+                    descricao.style.transform = 'translate(-50%, 0%)'; // Move a caixa de descrição para cima
+                });
+              
+                // Ocultar descrição ao remover o mouse do reino
+                reino.addEventListener('mouseleave', function() {
+                    const descricao = document.getElementById('descricao');
+                    descricao.style.opacity = 0;
+                    descricao.style.transform = 'translate(-50%, 50%)'; // Move a caixa de descrição para baixo
+                });
+              
+                // Redirecionar ao clicar no reino
+                reino.addEventListener('click', function() {
+                    const clickSound = document.getElementById('click-sound');
+                    clickSound.play().catch(error => {
+                        console.log('Erro ao reproduzir o som de clique:', error);
+                    });
+                    const reino = this.getAttribute('data-reino');
+                    // Redireciona para a página específica do reino
+                    window.location.href = `pagina_${reino.toLowerCase().replace(/\s/g, '_')}.html`;
+                });
+            });
+
+            // Manipulação do modal
+            document.querySelectorAll('.reino').forEach(reino => {
+                reino.addEventListener('click', function() {
+                    const modal = document.getElementById('modal');
+                    const title = document.getElementById('modal-title');
+                    const description = document.getElementById('modal-description');
+                    
+                    title.textContent = this.getAttribute('data-reino');
+                    description.textContent = 'Descrição detalhada sobre ' + this.getAttribute('data-reino'); // Adapte conforme necessário
+                    modal.style.display = 'block';
+                });
+            });
+
+            document.querySelector('.close').addEventListener('click', function() {
+                document.getElementById('modal').style.display = 'none';
+            });
+        });
+
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 100,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff" // Cor das partículas
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 100,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 100,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>

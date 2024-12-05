@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 5</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #121212;
+          color: #f0f0f0;
+          position: relative;
+      }
+  
+      .page {
+          display: none;
+          padding: 2rem;
+          max-width: 800px;
+          margin: auto;
+          background-color: #1e1e1e;
+          border-radius: 10px;
+          min-height: 100vh;
+          position: relative;
+          z-index: 1; /* Garante que o conteúdo principal fique acima das colunas laterais */
+      }
+  
+      .page.active {
+          display: block;
+      }
+  
+      .pagination {
+          text-align: center;
+          margin-top: 1rem;
+      }
+  
+      .btn {
+          display: inline-block;
+          padding: 1rem 2rem;
+          background-color: #6200ea;
+          color: #ffffff;
+          text-decoration: none;
+          border-radius: 5px;
+          transition: background-color 0.3s;
+      }
+  
+      .btn:hover {
+          background-color: #3700b3;
+      }
+  
+      .btn.disabled {
+          background-color: #cccccc;
+          cursor: not-allowed;
+      }
+  
+      footer {
+          text-align: center;
+          padding: 1rem;
+          background-color: #1e1e1e;
+          color: #ffffff;
+      }
+  
+      .chapter-title {
+          font-size: 2rem;
+          font-weight: bold;
+          color: #ff5722; /* Cor laranja para destaque */
+          text-align: center;
+          margin-bottom: 1rem;
+      }
+  
+      .illustration-container {
+          display: flex;
+          align-items: center; /* Alinha verticalmente o texto e a imagem */
+          margin: 1rem 0;
+      }
+  
+      .illustration-container .text {
+          flex: 1; /* Faz o texto ocupar o espaço restante */
+          margin-right: 1rem; /* Espaço entre o texto e a imagem */
+      }
+  
+      .illustration-container .illustration {
+          max-width: 200px; /* Ajuste conforme necessário */
+          height: auto;
+      }
+  
+      .side {
+          position: fixed; /* Use fixed para as colunas laterais ficarem fixas */
+          top: 0;
+          bottom: 0;
+          width: 15%; /* Ajuste a largura conforme necessário */
+          background: no-repeat center center;
+          background-size: cover;
+          z-index: 0; /* Colunas laterais ficam atrás do conteúdo principal */
+      }
+  
+      .side.left {
+          left: 0;
+          background-image: url('capa.jpg'); /* Imagem da coluna esquerda */
+      }
+  
+      .side.right {
+          right: 0;
+          background-image: url('capa.jpg'); /* Imagem da coluna direita */
+      }
+      </style>
+<body>
+    <div class="page active" id="page1">
+        <article>
+            <p class="chapter-title">Capítulo 5: Revelações Obscuras</p>
+            <p>Depois do confronto com o demônio, Shiro e Ive sentiram-se exaustos, mas também revigorados pela vitória. No entanto, o evento deixou uma sensação de inquietação pairando sobre eles enquanto retornavam ao seu local de treinamento.</p>
+
+<p>Enquanto caminhavam pela paisagem desolada que havia sido o campo de batalha, Shiro refletia sobre as palavras enigmáticas do demônio. Ele não conseguia tirar da mente a insinuação de que sua própria alma estava em perigo de corrupção. O que isso poderia significar?</p>
+
+<p>Ive percebeu a expressão pensativa de Shiro e colocou uma mão reconfortante em seu ombro. "Está tudo bem, Shiro. Nós vencemos", disse ela, tentando dissipar a tensão que pairava no ar.</p>
+
+<p>Shiro assentiu, mas sua mente ainda estava mergulhada em pensamentos sombrios. Ele sabia que precisava descobrir mais sobre o que o demônio havia insinuado, antes que fosse tarde demais.</p>
+
+<p>Quando finalmente chegaram ao seu local de treinamento, Shiro e Ive foram recebidos por uma atmosfera tensa. Os outros ceifadores pareciam inquietos e preocupados, trocando murmúrios ansiosos entre si.</p>
+
+<p>Ive olhou para Shiro com uma expressão séria. "Shiro, quero que você conheça alguém", disse ela, levando-o até um ceifador que estava próximo. "Este é Fell, um dos ceifadores em quem mais confio."</p>
+
+<p>Shiro olhou para Fell e notou imediatamente sua postura confiante e seu olhar penetrante, como se estivesse sempre avaliando a situação ao seu redor. Fell era alto e esguio, com cabelos negros que caíam em cascata sobre os ombros. Seu rosto tinha cicatrizes que contavam histórias de batalhas passadas, e seus olhos brilhavam com uma determinação inabalável.</p>
+
+<p>"É um prazer conhecê-lo, Shiro. Ouvi falar muito sobre você", disse Fell, estendendo a mão em cumprimento.</p>
+
+<p>Shiro apertou a mão de Fell, impressionado com a firmeza de seu aperto. Ele podia sentir a energia e a experiência emanando do ceifador mais velho, e sabia que podia confiar nele.</p>
+
+<p>Enquanto conversavam, Ive explicou a Shiro sobre os recentes ataques demoníacos e a crescente sensação de que algo sinistro estava acontecendo nos reinos espirituais. Fell acrescentou suas próprias teorias sobre os eventos, embora admitisse que não tinha nada concreto além de algumas pistas.</p>
+
+<p>"Algo está acontecendo nos bastidores", disse Fell sombriamente. "Suspeito que haja mais em jogo do que podemos imaginar."</p>
+
+<p>Shiro ouviu atentamente, absorvendo cada palavra com intensidade crescente. Ele sabia que havia muito mais na história do que eles sabiam, e estava determinado a descobrir a verdade, não importa o custo.</p>
+
+<p>Enquanto a noite caía sobre o mundo espiritual, Shiro percebeu que estava apenas arranhando a superfície de um mistério muito mais profundo. Com algumas coisas que não estavam batendo e a ameaça dos demônios pairando sobre eles, ele sabia que sua jornada estava apenas começando. E com a ajuda de Ive, Fell, suas chances de descobrir a verdade estavam mais próximas e ele estava determinado a enfrentar qualquer desafio que o destino lhes reservava.</p>
+
+<p>Depois do encontro com Fell e Ive, Shiro mergulhou de cabeça em sua nova missão como ceifador. Ele passou os dias coletando almas, algumas de bom grado e outras corrompidas pela influência maligna dos demônios. Cada encontro era uma oportunidade para Shiro aprimorar suas habilidades e entender melhor o mundo espiritual.</p>
+
+<p>Com a orientação de Ive e a experiência de Fell, Shiro aprendeu a diferenciar entre as almas que podiam ser salvas e aquelas que estavam perdidas para a corrupção. Ele descobriu que nem todas as almas corrompidas eram irremediáveis, e algumas ainda podiam ser redimidas com o poder da compaixão e da verdade.</p>
+
+<p>À medida que prosseguia em suas missões, Shiro enfrentava desafios cada vez maiores. Ele enfrentou demônios astutos que tentavam corromper as almas dos vivos e começou a desconfiar de ceifadores que poderiam ter se aliado ao submundo em busca de poder e influência.</p>
+
+<p>Com cada batalha, Shiro crescia mais forte e mais habilidoso. Ele aprendeu a usar suas foices com precisão mortal e a canalizar o poder da morte de maneiras que nunca imaginara. Cada alma coletada era uma vitória para Shiro e uma prova de seu compromisso em proteger os vivos dos perigos do mundo espiritual.</p>
+
+<p>No entanto, mesmo com seu sucesso crescente, Shiro ainda carregava o peso das palavras do demônio que o havia enfrentado. A insinuação de que sua própria alma estava em perigo de corrupção continuava a assombrá-lo, e ele sabia que precisava descobrir a verdade por trás dessas palavras antes que fosse tarde demais.</p>
+
+<p>Enquanto continuava sua jornada como ceifador, Shiro estava determinado a desvendar os mistérios que assolavam os reinos espirituais. Com a ajuda de seus aliados e sua própria determinação implacável, ele estava determinado a enfrentar qualquer desafio que o destino lhe reservava. Afinal, o destino de muitos estava em suas mãos, e ele não iria falhar.</p>
+
+<p>A presença de Fell trouxe uma nova dimensão ao grupo de ceifadores. Seu olhar penetrante e sua postura firme transmitiam uma aura de experiência e sabedoria acumuladas ao longo dos anos. Ele era um ceifador experiente, com cicatrizes que contavam histórias de batalhas passadas e desafios superados.</p>
+
+<p>Fell não era apenas um mentor para Shiro, mas também um amigo e confidente. Ele compartilhava suas próprias dúvidas e medos com Shiro, mostrando-lhe que mesmo os mais experientes ceifadores tinham suas fraquezas. Essa honestidade e vulnerabilidade fortaleceram o vínculo entre eles, transformando-os em aliados inseparáveis na luta contra as forças do mal.</p>
+
+<p>Durante os intervalos entre as missões, Shiro, Ive e Fell compartilhavam histórias sobre suas vidas e experiências passadas. Esses momentos de camaradagem fortaleceram os laços entre eles, transformando-os de meros colegas em uma verdadeira família de ceifadores.</p>
+
+<p>Cada vitória era uma prova de sua dedicação em proteger os vivos dos perigos do mundo espiritual, e cada derrota uma lição para fortalecer sua determinação. Shiro se tornou não apenas um ceifador habilidoso, mas também um guardião das almas, determinado a fazer a diferença em um mundo assolado pelo mal.</p>
+
+           
+        </article>
+        <div class="pagination">
+            <a href="capitulo4.html" id="prevPage" class="btn">Página Anterior</a>
+            <a href="capitulo6.html" class="btn">Próximo Capítulo</a>
+        </div>
+    </div>
+    <div class="side left"></div>
+    <div class="side right"></div>
+    <footer>
+        <p>&copy; 2024 R. Thomaz</p>
+    </footer>
+    <script>
+        let currentPage = 1;
+        const totalPages = 2; // Atualize com o número total de páginas do capítulo
+
+        function showPage(page) {
+            for (let i = 1; i <= totalPages; i++) {
+                document.getElementById(`page${i}`).classList.remove('active');
+            }
+            document.getElementById(`page${page}`).classList.add('active');
+            
+            // Atualizar visibilidade dos botões
+            document.getElementById('prevPage').classList.toggle('disabled', page === 1);
+            document.getElementById('nextPage').classList.toggle('disabled', page === totalPages);
+        }
+
+        document.getElementById('nextPage').addEventListener('click', function (e) {
+            e.preventDefault();
+            if (currentPage < totalPages) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        });
+
+        document.getElementById('prevPage').addEventListener('click', function (e) {
+            e.preventDefault();
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        });
+
+        showPage(currentPage);
+    </script>
+</body>
+</html>

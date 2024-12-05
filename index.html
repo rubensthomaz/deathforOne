@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Título do Livro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        header {
+            text-align: center;
+            padding: 1rem;
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        nav a {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #6200ea;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #3700b3;
+        }
+        main {
+            padding: 1rem;
+            text-align: center;
+        }
+        .chapter-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #df0000; /* Cor laranja para destaque */
+    text-align: center;
+    margin-bottom: 1rem;
+}
+        .cover {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .cover img {
+            width: 30%;
+            height: auto;
+            border-radius: 0;
+        }
+        .sinopse {
+            flex: 1;
+            text-align: left;
+        }
+        .galeria-capa {
+            margin: 1rem 0;
+        }
+        .galeria-capa img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .galeria-capa img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 0.5rem;
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+        @media (max-width: 768px) {
+            .cover {
+                flex-direction: column;
+            }
+            .sinopse {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="chapter-title" >DEATH FOR ONE</h1>
+    </header>
+    <nav>
+        <a href="capitulo1.html">Ler Agora</a>
+        <a href="galeria.html">Mapa Interativo</a>
+        <a href="agradecimentos.html">Agradecimentos</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+    <main>
+        <section class="cover">
+            <img src="capa.jpg" alt="Capa do Livro">
+            <section class="sinopse">
+                <h2>Sinopse</h2>
+                <p>Shiro estava cansado de uma vida medíocre e monótona após concluir o ensino médio 
+                    e começar a trabalhar em uma empresa de relações públicas. Embora Shiro fosse uma 
+                    pessoa comum e nada de extraordinário acontecesse em sua vida, ele era
+                    intrinsecamente bom. Tudo muda quando, em um trágico acidente de carro causado 
+                    por um motorista bêbado, Shiro é atropelado e é deixado à beira da morte. 
+                    Enquanto sua vida passa diante de seus olhos, ele se recusa a morrer sem deixar 
+                    sua marca no mundo. Nesse momento de desespero, a figura da morte aparece diante
+                    dele em uma forma aterrorizante, oferecendo-lhe um acordo incomum</p>
+            </section>
+        </section>
+        <footer>
+            <p>© 2024 R.Thomaz</p>
+        </footer>
+    </main>
+</body>
+</html>
